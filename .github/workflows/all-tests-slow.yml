@@ -1,17 +1,8 @@
-name: Run tests for all combinations
-
-on:
-  schedule:
-    - cron: "0 0 1,15 * *" # biweekly
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "*.md"
-
-jobs:
-  run-tests-for-all-combinations:
-    uses: ./.github/workflows/build-artifacts-and-run-tests.yml
-    with:
-      matrix_all_combinations: true
-      upload_artifacts: false
+--- a/.github/workflows/all-tests-slow.yml
++++ b/.github/workflows/all-tests-slow.yml
+@@ -14,4 +14,4 @@
+     uses: ./.github/workflows/build-artifacts-and-run-tests.yml
+     with:
+       matrix_all_combinations: true
+-      upload_artifacts: false
++      upload_artifacts: false
