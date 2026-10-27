@@ -1,6 +1,7 @@
 name: Run tests for all combinations
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 1,15 * *" # biweekly
   push:
