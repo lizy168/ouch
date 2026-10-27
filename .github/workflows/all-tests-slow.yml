@@ -1,13 +1,14 @@
 name: Run tests for all combinations
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 1,15 * *" # biweekly
   push:
     branches:
       - main
     paths-ignore:
-      - "*.md"
+      - "**/*.md"
 
 jobs:
   run-tests-for-all-combinations:
